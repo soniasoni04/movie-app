@@ -1,13 +1,17 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
+import Movies from "./components/movies";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Movie-App</h1>
-    </div>
-  );
+class App extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="App">
+        <h1>Movie-App</h1>
+        <Movies />
+      </div>
+    );
+  }
 }
 
 export default App;
