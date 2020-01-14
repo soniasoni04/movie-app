@@ -3,13 +3,22 @@ import { getMovies } from "../services/fakeMovieService";
 
 class Movies extends Component {
   state = {
-    movies: getMovies()
+    movies: getMovies(),
+    like: "fa fa-heart-o"
   };
 
   handleDelete = id => {
     console.log("deleted :", id);
     const movies = this.state.movies.filter(movie => id !== movie._id);
     this.setState({ movies });
+  };
+
+  handleLike = () => {
+    //console.log("like: ", this.state.like);
+    let like = "";
+    if (this.state.like === "fa fa-heart-o") like = "fa fa-heart";
+    else like = "fa fa-heart-o";
+    this.setState({ like });
   };
   render() {
     const { movies } = this.state;
@@ -26,6 +35,7 @@ class Movies extends Component {
                   <th scope="col">Stock</th>
                   <th scope="col">Rate</th>
                   <th></th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -35,12 +45,21 @@ class Movies extends Component {
                     <td>{movie.genre.name}</td>
                     <td>{movie.numberInStock}</td>
                     <td>{movie.dailyRentalRate}</td>
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => this.handleDelete(movie._id)}
-                    >
-                      DELETE
-                    </button>
+                    <td>
+                      <i
+                        className={this.state.like}
+                        aria-hidden="true"
+                        onClick={() => this.handleLike()}
+                      ></i>
+                    </td>
+                    <td>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => this.handleDelete(movie._id)}
+                      >
+                        DELETE
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
