@@ -73,6 +73,30 @@ const movies = [
     numberInStock: 7,
     dailyRentalRate: 3.5,
     like: false
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd47181f",
+    title: "Gone Girl+",
+    genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Thriller" },
+    numberInStock: 7,
+    dailyRentalRate: 4.5,
+    like: false
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd47181g",
+    title: "The Sixth Sense+",
+    genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Thriller" },
+    numberInStock: 4,
+    dailyRentalRate: 3.5,
+    like: false
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471822",
+    title: "The Avengers+",
+    genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
+    numberInStock: 7,
+    dailyRentalRate: 3.5,
+    like: false
   }
 ];
 
