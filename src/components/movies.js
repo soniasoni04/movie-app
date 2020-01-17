@@ -6,7 +6,7 @@ import Pagination from "./common/pagination";
 class Movies extends Component {
   state = {
     movies: getMovies(),
-    pageSize: 3
+    pageSize: 2
   };
 
   handleDelete = id => {
