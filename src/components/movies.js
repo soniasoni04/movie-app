@@ -6,7 +6,8 @@ import Pagination from "./common/pagination";
 class Movies extends Component {
   state = {
     movies: getMovies(),
-    pageSize: 2
+    pageSize: 2,
+    currentPage: 1
   };
 
   handleDelete = id => {
@@ -27,11 +28,12 @@ class Movies extends Component {
   };
 
   handlePageChange = page => {
-    console.log("page:", page);
+    //console.log("page:", page);
+    this.setState({ currentPage: page });
   };
 
   render() {
-    const { movies, pageSize } = this.state;
+    const { movies, pageSize, currentPage } = this.state;
     return (
       <main className="container m-3">
         <div>
@@ -79,6 +81,7 @@ class Movies extends Component {
           count={movies.length}
           pageSize={pageSize}
           onPageChange={this.handlePageChange}
+          currentPage={currentPage}
         />
       </main>
     );
