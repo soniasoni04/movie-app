@@ -42,7 +42,7 @@ class Movies extends Component {
     return (
       <main className="container m-3">
         <div>
-          <p>Showing {movies.length} movies in the database.</p>
+          <p>Showing {newMoviesList.length} movies in the database.</p>
           <table className="table table-bordered table-striped">
             <thead>
               <tr key="head">
