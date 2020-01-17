@@ -4,7 +4,7 @@ import _ from "lodash";
 class Pagination extends Component {
   render() {
     const { count, pageSize, currentPage, onPageChange } = this.props;
-    console.log("current page: ", currentPage);
+    // console.log("current page: ", currentPage);
     const pagesCount = Math.ceil(count / pageSize);
     if (pagesCount === 1) return null;
     //console.log("PagesCount: ", pagesCount);
